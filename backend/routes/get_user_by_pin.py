@@ -9,5 +9,8 @@ def get_user_by_pin(account_pin: str) -> dict:
     for key, user in users.items():
         if user["account_pin"] == account_pin:
             data = users[key]
-            return data
+            return {
+                "message": "data sucessfully recieved",
+                "data": data
+                }
     return {"message": "invalid account pin"}
