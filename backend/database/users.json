@@ -1,0 +1,50 @@
+{
+    "1": {
+        "name": "Tanishk",
+        "age": 15,
+        "address": "India",
+        "email": "tanishk@gmail.com",
+        "account_pin": 250611,
+        "balance": 2500000.0
+    },
+    "2": {
+        "name": "Harry",
+        "age": 25,
+        "address": "Chicago, US",
+        "email": "harry@gmail.io",
+        "account_pin": 175100,
+        "balance": 350000.0
+    },
+    "3": {
+        "name": "Hitesh",
+        "age": 18,
+        "address": "Jaipur, India",
+        "email": "hitesh01@api.com",
+        "account_pin": 175850,
+        "balance": 1000000.0
+    },
+    "4": {
+        "name": "Alice",
+        "age": 41,
+        "address": "Piza, Italy",
+        "email": "alicebob@gmail.com",
+        "account_pin": 12345678,
+        "balance": 450000.0
+    },
+    "4": {
+        "name": "Bob",
+        "age": 45,
+        "address": "South Africs",
+        "email": "bob@gmail.com",
+        "account_pin": 908070,
+        "balance": 50000.0
+    },
+    "6": {
+        "name": "Smriti",
+        "age": "30",
+        "address": "Mumbai, India",
+        "email": "smriti18@gmail.com",
+        "account_pin": 181818,
+        "balance": 7500000.0
+    }
+}
