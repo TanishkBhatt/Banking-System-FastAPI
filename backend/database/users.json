@@ -1,50 +1,58 @@
 {
-    "1": {
+    "tanishk25": {
         "name": "Tanishk",
         "age": 15,
         "address": "India",
         "email": "tanishk@gmail.com",
-        "account_pin": 250611,
+        "account_pin": "250611",
         "balance": 2500000.0
     },
-    "2": {
+    "harrybhai": {
         "name": "Harry",
         "age": 25,
         "address": "Chicago, US",
         "email": "harry@gmail.io",
-        "account_pin": 175100,
+        "account_pin": "B75100",
         "balance": 350000.0
     },
-    "3": {
+    "hitesh": {
         "name": "Hitesh",
         "age": 18,
         "address": "Jaipur, India",
         "email": "hitesh01@api.com",
-        "account_pin": 175850,
+        "account_pin": "175850DC",
         "balance": 1000000.0
     },
-    "4": {
+    "alice07": {
         "name": "Alice",
         "age": 41,
         "address": "Piza, Italy",
         "email": "alicebob@gmail.com",
-        "account_pin": 12345678,
+        "account_pin": "12345678",
         "balance": 450000.0
     },
-    "4": {
+    "bob": {
         "name": "Bob",
         "age": 45,
         "address": "South Africs",
         "email": "bob@gmail.com",
-        "account_pin": 908070,
+        "account_pin": "ABCD123",
         "balance": 50000.0
     },
-    "6": {
+    "smriti18": {
         "name": "Smriti",
         "age": "30",
         "address": "Mumbai, India",
         "email": "smriti18@gmail.com",
-        "account_pin": 181818,
+        "account_pin": "181818",
         "balance": 7500000.0
+    },
+    "becky001": {
+      "name": "Becky Lynch",
+      "age": 30,
+      "address": "Ireland",
+      "email": "bechy00@gmail.io",
+      "account_pin": "UK0707",
+      "balance": 100000
     }
 }
