@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.utils import get_current_users, import_data_to_db
+from models.db_manager import get_current_users, import_data_to_db
 
 app = APIRouter()
 

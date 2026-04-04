@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import ValidationError
 from models.schema import EmailModel, UPDATEABLE_KEYS
-from models.utils import get_current_users, import_data_to_db
+from models.db_manager import get_current_users, import_data_to_db
 
 app = APIRouter()
 
@@ -19,7 +19,7 @@ def update_account_details(account_pin: str, updating_key: str, updated_value: s
                         validate_email = EmailModel(email=updated_value)
                         users[key][updating_key] = validate_email.email
                     except ValidationError:
-                        return {"message": "invalid email formal to update"}
+                        return {"message": "invalid email format to update"}
                 case "age":
                     users[key][updating_key] = int(updated_value)
                 case _ :

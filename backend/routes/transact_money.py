@@ -2,6 +2,6 @@ from fastapi import APIRouter
 
 app = APIRouter()
 
-@app.put("/deposit-money")
-def deposit_money():
+@app.put("/transact-money")
+def transact_money():
     pass
