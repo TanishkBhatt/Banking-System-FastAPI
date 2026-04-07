@@ -6,9 +6,9 @@ app = APIRouter()
 
 @app.post("/create-account")
 def create_account(data: User) -> dict:
-    users = get_current_users("database/users.json")
-    invalid_pins = [user["account_pin"] for user in users.values()]
-    invalid_usernames = [u_name for u_name in list(users.keys())]
+    users: dict = get_current_users("database/users.json")
+    invalid_pins: list = [user["account_pin"] for user in users.values()]
+    invalid_usernames: list = [u_name for u_name in list(users.keys())]
 
     if data.account_pin not in invalid_pins:
         if data.username not in invalid_usernames:

@@ -3,15 +3,15 @@ from models.db_manager import get_current_users, import_data_to_db
 
 app = APIRouter()
 
-@app.delete("/delete-account")
+@app.delete("/delete-account/{account_pin}")
 def delete_account(account_pin: str) -> dict:
-    users = get_current_users("database/users.json")
+    users: dict = get_current_users("database/users.json")
 
-    for key, user in users.items():
-        if user["account_pin"] == account_pin:
-            deleted_account_username = key
-            deleted_account_details = user
-            del users[key]
+    for username, user_data in users.items():
+        if user_data["account_pin"] == account_pin:
+            deleted_account_username = username
+            deleted_account_details = user_data
+            del users[username]
 
             import_data_to_db("database/users.json", users)
             return {

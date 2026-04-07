@@ -10,6 +10,4 @@ class User(BaseModel):
     balance: float
 
 class EmailModel(BaseModel):
-    email: EmailStr
-
-UPDATEABLE_KEYS = ["username", "name", "age", "address", "email"]
+    email: EmailStr 
