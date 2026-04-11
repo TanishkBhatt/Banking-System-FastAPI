@@ -8,6 +8,3 @@ class User(BaseModel):
     email: EmailStr
     account_pin: str
     balance: float
-
-class EmailModel(BaseModel):
-    email: EmailStr 

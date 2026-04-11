@@ -1,0 +1,19 @@
+from fastapi import APIRouter
+from models.db_manager import get_current_users
+
+app = APIRouter()
+
+@app.get("/get-indvidual-user/{account_pin}")
+def get_indvidual_user(account_pin: str) -> dict:
+    try:
+        users: dict = get_current_users("database/users.json")
+        for username, user_data in users.items():
+            if user_data["account_pin"] == account_pin:
+                return {
+                    "message": "data sucessfully recieved",
+                    "data": {username: user_data}
+                    }
+        return {"message": "this account pin does not exists"}
+    except Exception as e:
+        return {"message": "something went wrong",
+                "error": str(e)}
