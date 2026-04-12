@@ -32,5 +32,4 @@ def create_account(data: User) -> dict:
             return {"message": "this username has been already taken"}
         return {"message": "this account pin has been already taken"}
     except Exception as e:
-        return {"message": "something went wrong",
-                "error": str(e)}
+        return {"message": f"something went wrong - {str(e)}"}

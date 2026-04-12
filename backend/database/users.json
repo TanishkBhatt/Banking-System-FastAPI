@@ -47,14 +47,6 @@
         "account_pin": "181818",
         "balance": 7500000.0
     },
-    "becky001": {
-        "name": "Becky Lynch",
-        "age": 29,
-        "address": "Ireland",
-        "email": "bechy00@gmail.io",
-        "account_pin": "UK0707",
-        "balance": 100000.0
-    },
     "rohit45": {
         "name": "Rohit Sharma",
         "age": 39,

@@ -23,5 +23,4 @@ def transact_money(account_pin: str, money_to_transact: float) -> dict:
                 else:
                     return {"messange": "invalid request, user can't transact money more than its balance"}
     except Exception as e:
-        return {"message": "something went wrong",
-                "error": str(e)}
+        return {"message": f"something went wrong - {str(e)}"}

@@ -8,11 +8,12 @@ def get_all_users() -> dict:
     try:
         users_data = get_current_users("database/users.json")
         if users_data:
+            for username, user_data in users_data.items():
+                del user_data["account_pin"]
             return {
                 "message": "data sucessfully recieved",
                 "data": users_data
                 }
-        return {"message": "database in empty"}
+        return {"message": "the database in empty"}
     except Exception as e:
-        return {"message": "something went wrong",
-                "error": str(e)}
+        return {"message": f"something went wrong - {str(e)}"}

@@ -21,5 +21,4 @@ def deposit_money(account_pin: str, money_to_deposit: float) -> dict:
                     }
         return {"message": "this account pin does not exists"}
     except Exception as e:
-        return {"message": "something went wrong",
-                "error": str(e)}
+        return {"message": f"something went wrong - {str(e)}"}

@@ -15,5 +15,4 @@ def get_indvidual_user(account_pin: str) -> dict:
                     }
         return {"message": "this account pin does not exists"}
     except Exception as e:
-        return {"message": "something went wrong",
-                "error": str(e)}
+        return {"message": f"something went wrong - {str(e)}"}

@@ -7,11 +7,11 @@ with st.sidebar:
     page = option_menu(
         menu_title="NAVIGATE",
         options=[
-            "HOME",
-            "CURRENT USERS",
-            "ACCOUNT MANAGEMENT",
-            "MONEY MANAGEMENT",
-            "ACTIVITY ANALYTICS"
+                "HOME",
+                "CURRENT USERS",
+                "ACCOUNT MANAGEMENT",
+                "MONEY MANAGEMENT",
+                "ACTIVITY ANALYTICS"
             ]
         )
 
