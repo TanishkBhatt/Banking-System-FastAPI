@@ -6,7 +6,8 @@ from routes import (
     create_account,  
     delete_account,
     deposit_money,
-    transact_money
+    transact_money,
+    activity_status
 )
 
 app = FastAPI()
@@ -18,3 +19,4 @@ app.include_router(create_account.app)
 app.include_router(delete_account.app)
 app.include_router(deposit_money.app)
 app.include_router(transact_money.app)
+app.include_router(activity_status.app)

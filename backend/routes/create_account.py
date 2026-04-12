@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from models.schema import User
 from models.db_manager import get_current_users, import_data_to_db
+from models.hashing import hash_pin, verify
 
 app = APIRouter()
 
@@ -18,11 +19,14 @@ def create_account(data: User) -> dict:
                     "age": data.age,
                     "address": data.address,
                     "email": data.email,
-                    "account_pin": data.account_pin,
-                    "balance": data.balance
+                    "account_pin": hash_pin(data.account_pin),
+                    "balance": data.balance,
+                    "gender": data.gender
                 }
                 users[data.username] = user_data
                 import_data_to_db("database/users.json", users)
+
+                del user_data["account_pin"]
                 return {
                     "message": "account sucessfully created",
                     "account_details": {

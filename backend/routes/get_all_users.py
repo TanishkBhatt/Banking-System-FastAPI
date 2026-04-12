@@ -12,7 +12,7 @@ def get_all_users() -> dict:
                 del user_data["account_pin"]
             return {
                 "message": "data sucessfully recieved",
-                "data": users_data
+                "user_data": list(users_data.values())
                 }
         return {"message": "the database in empty"}
     except Exception as e:

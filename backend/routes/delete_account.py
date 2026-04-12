@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users, import_data_to_db
+from models.hashing import hash_pin, verify
 
 app = APIRouter()
 
@@ -9,12 +10,13 @@ def delete_account(account_pin: str) -> dict:
         users: dict = get_current_users("database/users.json")
 
         for username, user_data in users.items():
-            if user_data["account_pin"] == account_pin:
+            if verify(user_data["account_pin"], account_pin):
                 deleted_account_username = username
                 deleted_account_details = user_data
                 del users[username]
 
                 import_data_to_db("database/users.json", users)
+                del user_data["account_pin"]
                 return {
                     "message": "account sucessfully deleted",
                     "deleted_account_details": {

@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users
+from models.hashing import hash_pin, verify
 
 app = APIRouter()
 
@@ -8,10 +9,11 @@ def get_indvidual_user(account_pin: str) -> dict:
     try:
         users: dict = get_current_users("database/users.json")
         for username, user_data in users.items():
-            if user_data["account_pin"] == account_pin:
+            if verify(user_data["account_pin"], account_pin):
+                del user_data["account_pin"]
                 return {
                     "message": "data sucessfully recieved",
-                    "data": {username: user_data}
+                    "user_data": {username: user_data}
                     }
         return {"message": "this account pin does not exists"}
     except Exception as e:

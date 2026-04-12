@@ -8,7 +8,7 @@ def home():
     conn = requests.get("http://127.0.0.1:8000/")
 
     st.subheader("INTRODUCTION")
-    st.markdown("a **python** based **banking management system** is a real world application handling **account and money management** using **fastapi** as backend engine and **streamlit** as a frontend framework.".title())
+    st.markdown("a **python** based **banking system** is a real world application handling **account and money management** using **fastapi** as backend engine and **streamlit** as a frontend framework.".title())
     st.markdown("Made By Tanishk - A Student And A Programmer")
 
     st.divider()
@@ -21,7 +21,6 @@ def home():
                 f"""
                 - Simulates Real Banking Operations
                 - Designed similar to actual Banking Systems
-                - User Friendly Frontend
                 """
             )
         with st.expander("User Validation"):
@@ -29,15 +28,13 @@ def home():
                 f"""
                 - Strong Data Validation using Pydantic
                 - Prevents invalid data from entering the system
-                - Automatic Validation
                 """
             )
         with st.expander("Account Management"):
             st.markdown(
                 f"""
                 - Basic CRUD Operations
-                - Unique account identification - username and account-pin
-                - Structured Storage and Retrieval of data
+                - Unique account Identification
                 """
             )
     with col2:
@@ -60,7 +57,7 @@ def home():
                 f"""
                 - FastAPI - Backend
                 - Streamlit - Frontend
-                - DataBase - Local JSON Files
+                - DataBase - JSON
                 """
             )
 
