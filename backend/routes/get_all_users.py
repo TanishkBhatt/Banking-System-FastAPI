@@ -1,7 +1,9 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users
 
-app = APIRouter()
+app = APIRouter(
+     tags=["Current Users"]
+)
 
 @app.get("/get-all-users")
 def get_all_users() -> dict:

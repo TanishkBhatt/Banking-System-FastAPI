@@ -1,9 +1,11 @@
 from fastapi import APIRouter
 from models.schema import User
 from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import hash_pin, verify
+from models.hashing import hash_pin
 
-app = APIRouter()
+app = APIRouter(
+    tags=["Account Management"]
+)
 
 @app.post("/create-account")
 def create_account(data: User) -> dict:
@@ -15,12 +17,13 @@ def create_account(data: User) -> dict:
         if data.account_pin not in invalid_pins:
             if data.username not in invalid_usernames:
                 user_data = {
-                    "name": data.name,
+                    "name": str(data.name).title(),
                     "age": data.age,
-                    "address": data.address,
+                    "address": str(data.address).title(),
                     "email": data.email,
                     "account_pin": hash_pin(data.account_pin),
                     "balance": data.balance,
+                    "loan": [0.0, 0],
                     "gender": data.gender
                 }
                 users[data.username] = user_data

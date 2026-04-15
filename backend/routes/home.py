@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 
-app = APIRouter()
+app = APIRouter(
+    tags=["Home"]
+)
 
 @app.get("/")
 def home() -> dict:

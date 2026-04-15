@@ -3,14 +3,17 @@ from streamlit_option_menu import option_menu
 from templates import *
 
 st.set_page_config("Banking System - FastAPI")
+
 with st.sidebar:
     page = option_menu(
             menu_title="NAVIGATE",
+            menu_icon="cast",
             options=[
-                    "HOME",
-                    "CURRENT USERS",
-                    "ACCOUNT MANAGEMENT",
-                    "MONEY MANAGEMENT"
+                "HOME",
+                "CURRENT USERS",
+                "ACCOUNT MANAGEMENT",
+                "MONEY MANAGEMENT",
+                "LOAN MANAGEMENT"
             ])
 
 match page:
@@ -22,3 +25,7 @@ match page:
         account_management()
     case "MONEY MANAGEMENT":
         money_management()
+    case "LOAN MANAGEMENT":
+        loan_management()
+    case _:
+        pass 

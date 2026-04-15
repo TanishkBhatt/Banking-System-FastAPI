@@ -8,58 +8,59 @@ def home():
     conn = requests.get("http://127.0.0.1:8000/")
 
     st.subheader("INTRODUCTION")
-    st.markdown("a **python** based **banking system** is a real world application handling **account and money management** using **fastapi** as backend engine and **streamlit** as a frontend framework.".title())
-    st.markdown("Made By Tanishk - A Student And A Programmer")
+    st.markdown("a simple **banking system** built using fastapi as backend and streamlit as frontend, handling user accounts, money management and loan management systems.".title())
 
     st.divider()
+
+    res = requests.get("http://127.0.0.1:8000/activity-status")
+    data = res.json()
+
+    if data:
+        if data["message"] == "data successfully retrieved":
+            datasets = data["datasets"]
+
+            col1, col2 = st.columns(2)
+            with col1:
+                st.metric("TOATL USERS REGISTERED", 
+                            value=f"{datasets["total_users"]} USERS", 
+                            delta="+ 5 USERS")
+                st.metric("TOTAL LOAN TAKERS",
+                        value=f"{datasets["total_loan_takers"]} USERS",
+                        delta="+ 2 USERS")
+
+            with col2:
+                st.metric("TOATL MONEY DEPOSITED", 
+                            value=f"$ {datasets["total_money"]}", 
+                            delta="+ $5000000")
+                
+                st.metric("TOTAL LOAN BORROWD BY USERS",
+                        value=f"${datasets["total_money_loan_given"]}",
+                        delta="+ $10000")
+            st.divider()    
+        else:
+            st.error(data["message"].upper())
+    else:
+        st.error('FAILED TO RETRIEVE DATA')
+
+    st.markdown("")
     st.subheader("FEATURES")
     col1, col2 = st.columns(2)
 
     with col1:
-        with st.expander("Real World Application"):
-            st.markdown(
-                f"""
-                - Simulates Real Banking Operations
-                - Designed similar to actual Banking Systems
-                """
-            )
-        with st.expander("User Validation"):
-            st.markdown(
-                f"""
-                - Strong Data Validation using Pydantic
-                - Prevents invalid data from entering the system
-                """
-            )
-        with st.expander("Account Management"):
-            st.markdown(
-                f"""
-                - Basic CRUD Operations
-                - Unique account Identification
-                """
-            )
+        with st.container(border=True):
+            st.markdown("REAL WORLD USAGE")
+        with st.container(border=True):
+            st.markdown("ACCOUNT MANAGEMENT")
+        with st.container(border=True):
+            st.markdown("VALIDATION AND AUTHENTICATION")
+
     with col2:
-        with st.expander("Money Management"):
-            st.markdown(
-                f"""
-                - Supports deposit and transaction of money
-                - Ensures safegaurd for insuffcient balance handling
-                """
-            )
-        with st.expander("Activity Status"):
-            st.markdown(
-                f"""
-                - Track Users Activities
-                - Provides Insights and Repots
-                """
-            )
-        with st.expander("Technical Stack Used"):
-            st.markdown(
-                f"""
-                - FastAPI - Backend
-                - Streamlit - Frontend
-                - DataBase - JSON
-                """
-            )
+        with st.container(border=True):
+            st.markdown("MONEY MANAGEMENT")
+        with st.container(border=True):
+            st.markdown("LOAN MANGEMENET")
+        with st.container(border=True):
+            st.markdown("OPEN SOURCE PROJECT")
 
     col1, col2, col3 = st.columns(3)
     with col2:

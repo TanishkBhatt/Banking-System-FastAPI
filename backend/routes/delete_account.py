@@ -1,8 +1,10 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import hash_pin, verify
+from models.hashing import verify
 
-app = APIRouter()
+app = APIRouter(
+    tags=["Account Management"]
+)
 
 @app.delete("/delete-account/{account_pin}")
 def delete_account(account_pin: str) -> dict:

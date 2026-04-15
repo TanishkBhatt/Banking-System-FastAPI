@@ -1,8 +1,10 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users
-from models.hashing import hash_pin, verify
+from models.hashing import verify
 
-app = APIRouter()
+app = APIRouter(
+     tags=["Current Users"]
+)
 
 @app.get("/get-indvidual-user/{account_pin}")
 def get_indvidual_user(account_pin: str) -> dict:

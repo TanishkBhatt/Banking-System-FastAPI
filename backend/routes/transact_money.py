@@ -1,8 +1,10 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import hash_pin, verify
+from models.hashing import verify
 
-app = APIRouter()
+app = APIRouter(
+    tags=["Money Management"]
+)
 
 @app.put("/transact-money/{account_pin}/{money_to_transact}")
 def transact_money(account_pin: str, money_to_transact: float) -> dict:
@@ -24,7 +26,7 @@ def transact_money(account_pin: str, money_to_transact: float) -> dict:
                             }
                         }
                 else:
-                    return {"messange": "invalid request, user can't transact money more than its balance"}
+                    return {"message": "invalid request, user can't transact money more than its balance"}
         return {"message": "this account pin does not exists"}
     except Exception as e:
         return {"message": f"something went wrong - {str(e)}"}

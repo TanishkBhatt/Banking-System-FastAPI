@@ -6,6 +6,7 @@
         "email": "john.doe@gmail.com",
         "account_pin": "93d2fc97a3c0ffa7f4064482f05538082caab7920420d13561d84e4aa80d5051",
         "balance": 119100.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "emma_watson": {
@@ -15,6 +16,7 @@
         "email": "emma.watson@mail.com",
         "account_pin": "d37286d2dbd8452887cb6225466c0388c679f2aafdf0a32c8ff96d1fed9456b3",
         "balance": 950000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "michael_smith": {
@@ -23,7 +25,8 @@
         "address": "Toronto, Canada",
         "email": "mike.smith@outlook.com",
         "account_pin": "8deea47f197df25c974f2355b9d8ce7f5389ffadbcab60f220daf7f0e581df99",
-        "balance": 670000.0,
+        "balance": 679640.0,
+        "loan": 10000.0,
         "gender": "MALE"
     },
     "olivia_brown": {
@@ -33,6 +36,7 @@
         "email": "olivia.brown@gmail.com",
         "account_pin": "8669268bc4e4e4f3cd4cc3160d3cdb9aaaf414fa9feb8ff8015b5e44c83fe5b0",
         "balance": 210000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "william_jones": {
@@ -42,6 +46,7 @@
         "email": "will.jones@mail.com",
         "account_pin": "598c2fb56e13408579dc668e80129ec9e6c6185f0ea7feb3a5bfb830a8b88fb0",
         "balance": 780000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "sophia_davis": {
@@ -51,6 +56,7 @@
         "email": "sophia.davis@gmail.com",
         "account_pin": "3ea8eeb86ae3feff77a131f252b9c446ae4388e0eaf04d56f9a7ee97992f565d",
         "balance": 500000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "james_miller": {
@@ -60,6 +66,7 @@
         "email": "james.miller@mail.com",
         "account_pin": "9a16a4156cf60421b4fda219c29881eeb835b70bcccfd743164f65639d2fd135",
         "balance": 340000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "isabella_wilson": {
@@ -69,6 +76,7 @@
         "email": "isabella.w@gmail.com",
         "account_pin": "7eaeed600023b66ea12d0bde2f3e04f9b9800a011fc1fea1f33e0d92eb0df1b4",
         "balance": 890000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "benjamin_moore": {
@@ -78,6 +86,7 @@
         "email": "ben.moore@mail.com",
         "account_pin": "72eae5261b1424ead365136876a82a40dc8346d5336d75e261b498ecbcc58498",
         "balance": 1200000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "mia_taylor": {
@@ -87,6 +96,7 @@
         "email": "mia.taylor@gmail.com",
         "account_pin": "6f3ed1583f7b7730000624629309e09bb65529c667dfe1ef905d3ea36ea8b110",
         "balance": 150000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "lucas_anderson": {
@@ -96,6 +106,7 @@
         "email": "lucas.a@mail.com",
         "account_pin": "584195be917bd656dd520aa737c8ecefd651f05ee4efc2805a245b5a873d2784",
         "balance": 430000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "amelia_thomas": {
@@ -105,6 +116,7 @@
         "email": "amelia.t@gmail.com",
         "account_pin": "2c362948fb4e719b98d64ed210236dbafbd0bb637d52aad382395c6df479e3f5",
         "balance": 620000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "henry_jackson": {
@@ -114,6 +126,7 @@
         "email": "henry.j@mail.com",
         "account_pin": "afe8b09dbe71d7b08280f03effa10adb6756848cc259d649f7464177d5fe1c4d",
         "balance": 980000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "charlotte_white": {
@@ -123,6 +136,7 @@
         "email": "charlotte.w@gmail.com",
         "account_pin": "60af81214a497000a292241fb908f9aacb380330d2d896638d4adb1ec2cbe28d",
         "balance": 740000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "daniel_harris": {
@@ -132,6 +146,7 @@
         "email": "daniel.h@mail.com",
         "account_pin": "36c594a2a6f674551291ce8066b4044728545334f97547de73fb61f8a0455650",
         "balance": 560000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "ava_martin": {
@@ -141,6 +156,7 @@
         "email": "ava.m@gmail.com",
         "account_pin": "3ef464dd79f7ed0ddb1a0585c94fc9b839dfa11ec0ae6d6bbd265b22f4f900d4",
         "balance": 310000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "ethan_thompson": {
@@ -150,6 +166,7 @@
         "email": "ethan.t@mail.com",
         "account_pin": "e6fd3896dcd4cee5837e3f3f1c448bd637c1b15c26aab58240787ea25bcf74a3",
         "balance": 670000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "harper_garcia": {
@@ -159,6 +176,7 @@
         "email": "harper.g@gmail.com",
         "account_pin": "1d81852bd4a56cfc6ad1cf376d53105d2067c6e8337237e6780adf7fe27a3686",
         "balance": 410000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "alexander_martinez": {
@@ -168,6 +186,7 @@
         "email": "alex.m@mail.com",
         "account_pin": "7f3d726a258441ed5058a6b8e7fe2d1bd903f312eee3f0f6ed5df0a7ae4a1d32",
         "balance": 820000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "ella_robinson": {
@@ -177,6 +196,7 @@
         "email": "ella.r@gmail.com",
         "account_pin": "df365b87a82719d31006fcf8ce4249f07eaf431de4623e025d3a4aa4322b74c0",
         "balance": 190000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "sebastian_clark": {
@@ -186,6 +206,7 @@
         "email": "sebastian.c@mail.com",
         "account_pin": "ca6b7e10f470b62141a2f69e6eeff299f05d809fb68a1c08134cd51943215706",
         "balance": 1050000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "scarlett_lewis": {
@@ -195,6 +216,7 @@
         "email": "scarlett.l@gmail.com",
         "account_pin": "3825a8e5b0632431e4a8de2b220aeafd3b42107580f75f25ca19625c258bd1ec",
         "balance": 460000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "jack_walker": {
@@ -204,6 +226,7 @@
         "email": "jack.w@mail.com",
         "account_pin": "abafb5bf0a730b24d65d1c2546fa05624e70713d241a4cd9dca5ff054c9eac55",
         "balance": 380000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "victoria_hall": {
@@ -213,6 +236,7 @@
         "email": "victoria.h@gmail.com",
         "account_pin": "9ff0f86704329f4b382270f76859d19fda86117854fa33c01f2e33791c71dd57",
         "balance": 720000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "leo_allen": {
@@ -222,6 +246,7 @@
         "email": "leo.a@mail.com",
         "account_pin": "ade38e3ca3caba51f6e3925a4619ba245dcdf522f27b529fb372a39448caac67",
         "balance": 260000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "grace_young": {
@@ -231,6 +256,7 @@
         "email": "grace.y@gmail.com",
         "account_pin": "847bc82e78606bb57ac652b08300227cebd2455310ec90c53c9e61a09212fa8d",
         "balance": 540000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "david_king": {
@@ -240,6 +266,7 @@
         "email": "david.k@mail.com",
         "account_pin": "4e9f4c0f0536cdcddc8bde668431e6b89333de7903e6f2bb960056e12b66e3b5",
         "balance": 1300000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "chloe_scott": {
@@ -249,6 +276,7 @@
         "email": "chloe.s@gmail.com",
         "account_pin": "6dfe3f928fc334da163b2b6ee9d2dd5dd654e224502a9df67561b1ead34c8ab6",
         "balance": 300000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "nathan_adams": {
@@ -258,6 +286,7 @@
         "email": "nathan.a@mail.com",
         "account_pin": "7b7067db6687272a634aaa9036c1523fda1343d1d29c6a45bc0d032166f80c26",
         "balance": 880000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "liam_turner": {
@@ -267,24 +296,27 @@
         "email": "liam.turner@gmail.com",
         "account_pin": "d761345161d066488f3161388558839a46826bd131049e6f8ddfbcbfa635c7ea",
         "balance": 90000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "noah_hill": {
         "name": "Noah Hill",
-        "age": 16,
+        "age": 18,
         "address": "Austin, USA",
         "email": "noah.hill@gmail.com",
         "account_pin": "867c4497ba27396c2055ab468be4785bda00050f51b8b1f14009f7f87f5b766b",
         "balance": 15000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "ava_green": {
         "name": "Ava Green",
-        "age": 14,
+        "age": 34,
         "address": "Leeds, UK",
         "email": "ava.green@gmail.com",
         "account_pin": "156bc6e8d2faa690901d0736c1aba274ff43a3318b97366d10130beedf0851d8",
         "balance": 5000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "elijah_baker": {
@@ -294,6 +326,7 @@
         "email": "elijah.b@mail.com",
         "account_pin": "21feb4d735c5744b98d03018d8fd39cb33970b9f6d637d52264f47e0dfd92796",
         "balance": 880000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "lucy_parker": {
@@ -303,6 +336,7 @@
         "email": "lucy.p@gmail.com",
         "account_pin": "631bdbc1d2874eb864a836cfcd27750734668879f0032b2f16e73fbee878b9cd",
         "balance": 430000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "jack_evans": {
@@ -312,6 +346,7 @@
         "email": "jack.evans@mail.com",
         "account_pin": "f30c32306f68124c592a7b6cc2163017c46b271f50c898828d551e425aed6abf",
         "balance": 290000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "ella_bennett": {
@@ -321,6 +356,7 @@
         "email": "ella.b@gmail.com",
         "account_pin": "7aa95f7cbade230ab252dfde4c3574a9f6503b50585998b1a0129cffd6712000",
         "balance": 370000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "logan_cooper": {
@@ -330,24 +366,7 @@
         "email": "logan.c@gmail.com",
         "account_pin": "27314091f20529430e0bf6e3ee2107c8fb35192f413c29b4544a4af915fb373f",
         "balance": 140000.0,
-        "gender": "MALE"
-    },
-    "mia_ward": {
-        "name": "Mia Ward",
-        "age": 18,
-        "address": "Liverpool, UK",
-        "email": "mia.ward@gmail.com",
-        "account_pin": "a359720755405bd4f75bb6db654e21b9e1ecff2f3071e19bd0941ad5b19f6361",
-        "balance": 80000.0,
-        "gender": "FEMALE"
-    },
-    "oliver_cox": {
-        "name": "Oliver Cox",
-        "age": 47,
-        "address": "San Diego, USA",
-        "email": "oliver.c@mail.com",
-        "account_pin": "f05b94c85f1014fa513c99447c8aa10f7cac8994ed7c126b93218c72e4dda64d",
-        "balance": 620000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "emily_richardson": {
@@ -357,15 +376,17 @@
         "email": "emily.r@gmail.com",
         "account_pin": "4906701ce49cbd68b0a43d0b1750fa725161f8e0c3ebbe9820de2d062cb91fb8",
         "balance": 710000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "jacob_ward": {
         "name": "Jacob Ward",
-        "age": 13,
+        "age": 23,
         "address": "Leicester, UK",
         "email": "jacob.w@gmail.com",
         "account_pin": "3b01104031a7763e7e26d9f65c4cd1dda05f95c73c57ad8b785870acb45c3b24",
         "balance": 3000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "sophie_morris": {
@@ -375,6 +396,7 @@
         "email": "sophie.m@gmail.com",
         "account_pin": "c7a9f76c77963560162d9c0df1be74f91b8614c7ae7867594a5b1b0aed8ed863",
         "balance": 410000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "henry_collins": {
@@ -384,6 +406,7 @@
         "email": "henry.c@mail.com",
         "account_pin": "e79065cac2aed0a3dcbe20f0a9d0b24ffe521ba26c06a1bbb5c355bc2672af4a",
         "balance": 990000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "lily_edwards": {
@@ -393,6 +416,7 @@
         "email": "lily.e@gmail.com",
         "account_pin": "a9df03eaa8f356ba75abead0e764fc7170b0b720c41a04687eabda4dfa72587c",
         "balance": 160000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "daniel_foster": {
@@ -402,6 +426,7 @@
         "email": "daniel.f@mail.com",
         "account_pin": "96a2833adca4221549eb58254bfb2fb52bb416232d455c045fed2846db4b23ac",
         "balance": 530000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "chloe_hughes": {
@@ -411,15 +436,17 @@
         "email": "chloe.h@gmail.com",
         "account_pin": "d3019ea2b81eacca66a7202b7a7b3d160b111781737df9f31cfdc19f9ab585ed",
         "balance": 300000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "mason_price": {
         "name": "Mason Price",
-        "age": 17,
+        "age": 18,
         "address": "Denver, USA",
         "email": "mason.p@gmail.com",
         "account_pin": "f62323f6ad435d13d2e1ab267dcdf3050a1e50b1baa9087d055166d41090ba73",
         "balance": 20000.0,
+        "loan": 0.0,
         "gender": "MALE"
     },
     "amelia_kelly": {
@@ -429,6 +456,7 @@
         "email": "amelia.k@gmail.com",
         "account_pin": "e045e23cf8b68c4823b04ac9c390373c9c01b4ff337444e8e62d0cb0baa8da74",
         "balance": 680000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     },
     "ethan_ward": {
@@ -437,16 +465,18 @@
         "address": "Adelaide, Australia",
         "email": "ethan.w@mail.com",
         "account_pin": "33f2f4d36367c372af41b03b7c4b8743433d4dca50c7035f98b0e4384e7c0f81",
-        "balance": 870000.0,
+        "balance": 968200.0,
+        "loan": 100000.0,
         "gender": "MALE"
     },
     "grace_hamilton": {
         "name": "Grace Hamilton",
-        "age": 12,
+        "age": 22,
         "address": "Canberra, Australia",
         "email": "grace.h@gmail.com",
         "account_pin": "4761625a8627480705d95da7480e1c116117b0c65d7fdee5668716fa9c93d320",
         "balance": 2000.0,
+        "loan": 0.0,
         "gender": "FEMALE"
     }
 }

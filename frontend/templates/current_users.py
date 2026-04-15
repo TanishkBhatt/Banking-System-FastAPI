@@ -14,13 +14,21 @@ def current_users():
 
             col1, col2 = st.columns(2)
             with col1:
-                st.metric("TOATL USERS REGISTERS", 
+                st.metric("TOATL USERS REGISTERED", 
                             value=f"{datasets["total_users"]} USERS", 
                             delta="+ 5 USERS")
+                st.metric("TOTAL LOAN TAKERS",
+                          value=f"{datasets["total_loan_takers"]} USERS",
+                          delta="+ 2 USERS")
+
             with col2:
                 st.metric("TOATL MONEY DEPOSITED", 
                             value=f"$ {datasets["total_money"]}", 
                             delta="+ $5000000")
+                
+                st.metric("TOTAL LOAN BORROWD BY USERS",
+                          value=f"${datasets["total_money_loan_given"]}",
+                          delta="+ $10000")
         else:
             st.error(data["message"].upper())
     else:

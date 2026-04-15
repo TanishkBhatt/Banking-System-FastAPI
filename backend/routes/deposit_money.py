@@ -1,8 +1,10 @@
 from fastapi import APIRouter
 from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import hash_pin, verify
+from models.hashing import verify
 
-app = APIRouter()
+app = APIRouter(
+    tags=["Money Management"]
+)
 
 @app.put("/deposit-money/{account_pin}/{money_to_deposit}")
 def deposit_money(account_pin: str, money_to_deposit: float) -> dict:

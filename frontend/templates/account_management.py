@@ -1,7 +1,17 @@
 import streamlit as st
 import requests
-from .models.schema import User
-from pydantic import ValidationError
+from pydantic import BaseModel, EmailStr, ValidationError
+from typing import Literal
+
+class User(BaseModel):
+    username: str
+    name: str
+    age: int
+    gender: Literal["MALE", "FEMALE"]
+    address: str
+    email: EmailStr
+    account_pin: str
+    balance: float
 
 def account_management():
     st.title("ACCOUNT MANAGEMENT")
@@ -15,12 +25,12 @@ def account_management():
         with col1:
             username = st.text_input("ENTER A USERNAME FOR YOUR ACCOUNT")
             name = st.text_input("ENTER YOUR FULL NAME")
-            age = st.number_input("ENTER YOUR AGE (IN YEARS)", min_value=1, max_value=100, value=18, step=1)
+            age = st.number_input("ENTER YOUR AGE (IN YEARS)", min_value=18, max_value=100, value=18, step=1)
             gender = st.selectbox("SELECT YOUR GENDER", ["MALE", "FEMALE"])
 
         with col2:
             address = st.text_input("ENTER YOUR ADDRESS")
-            email = st.text_input("ENTER YOUR EMAIL ADDRESS")
+            email = st.text_input("ENTER YOUR EMAIL ADDRESS", value="@gmail.com")
             account_pin = st.text_input("CREATE A SECURE PIN FOR YOUR ACCOUNT", type="password")
             balance = st.number_input("DEPOSIT SOME BALANCE INTO YOUR ACCOUNT", min_value=0.0, value=0.0, step=1.0)
 
