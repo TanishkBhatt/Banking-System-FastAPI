@@ -23,7 +23,7 @@ def create_account(data: User) -> dict:
                     "email": data.email,
                     "account_pin": hash_pin(data.account_pin),
                     "balance": data.balance,
-                    "loan": [0.0, 0],
+                    "loan": data.loan,
                     "gender": data.gender
                 }
                 users[data.username] = user_data

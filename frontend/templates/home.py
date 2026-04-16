@@ -1,66 +1,86 @@
 import streamlit as st
 import requests
+from .kpi_metrics import kpi_metrics
+from streamlit_option_menu import option_menu
 
 def home():
     st.title("BANKING SYSTEM - FASTAPI")
     st.divider()
 
-    conn = requests.get("http://127.0.0.1:8000/")
+    # Connection Insurance
+    requests.get("http://127.0.0.1:8000/")
 
     st.subheader("INTRODUCTION")
-    st.markdown("a simple **banking system** built using fastapi as backend and streamlit as frontend, handling user accounts, money management and loan management systems.".title())
+    st.markdown("a simple **banking system** built using python to simulate real world system workflows. handing user accounts, money management and loan management.".title())
 
     st.divider()
 
-    res = requests.get("http://127.0.0.1:8000/activity-status")
-    data = res.json()
+    kpi_metrics()
 
-    if data:
-        if data["message"] == "data successfully retrieved":
-            datasets = data["datasets"]
+    st.divider()
 
-            col1, col2 = st.columns(2)
-            with col1:
-                st.metric("TOATL USERS REGISTERED", 
-                            value=f"{datasets["total_users"]} USERS", 
-                            delta="+ 5 USERS")
-                st.metric("TOTAL LOAN TAKERS",
-                        value=f"{datasets["total_loan_takers"]} USERS",
-                        delta="+ 2 USERS")
-
-            with col2:
-                st.metric("TOATL MONEY DEPOSITED", 
-                            value=f"$ {datasets["total_money"]}", 
-                            delta="+ $5000000")
-                
-                st.metric("TOTAL LOAN BORROWD BY USERS",
-                        value=f"${datasets["total_money_loan_given"]}",
-                        delta="+ $10000")
-            st.divider()    
-        else:
-            st.error(data["message"].upper())
-    else:
-        st.error('FAILED TO RETRIEVE DATA')
-
-    st.markdown("")
     st.subheader("FEATURES")
+    st.markdown("")
+
     col1, col2 = st.columns(2)
 
     with col1:
-        with st.container(border=True):
-            st.markdown("REAL WORLD USAGE")
-        with st.container(border=True):
-            st.markdown("ACCOUNT MANAGEMENT")
-        with st.container(border=True):
-            st.markdown("VALIDATION AND AUTHENTICATION")
+        with st.expander("ACCOUNT MANAGEMENT"):
+            st.markdown("""
+            - Create and manage user accounts
+            - Store user details like name, email and balance
+            - Secure account identification using unique PINs
+            """.title())
+
+        with st.expander("VALIDATION AND AUTHENTICATION"):
+            st.markdown("""
+            - Input validation for all user data
+            - Secure authentication using account PIN
+            - Prevention of invalid or unauthorized access
+            """.title())
+
+        with st.expander("DEPOSITION AND TRANSACTION"):
+            st.markdown("""
+            - Deposit money into user accounts
+            - Withdraw funds securely
+            - Real-time balance updates after each transaction
+            """.title())
+
+        with st.expander("MONEY TRANSFERRING"):
+            st.markdown("""
+            - Transfer money between accounts
+            - Validation of sender and receiver accounts
+            - Safe and consistent transaction handling
+            """.title())
 
     with col2:
-        with st.container(border=True):
-            st.markdown("MONEY MANAGEMENT")
-        with st.container(border=True):
-            st.markdown("LOAN MANGEMENET")
-        with st.container(border=True):
-            st.markdown("OPEN SOURCE PROJECT")
+        with st.expander("CURRENT USERS DETAILS"):
+            st.markdown("""
+            - View all registered users
+            - Display account details and balances
+            - Organized and readable data format
+            """.title())
+
+        with st.expander("KPI METRICS"):
+            st.markdown("""
+            - Total users in the system
+            - Total bank balance overview
+            - Insights into system activity and growth
+            """.title())
+
+        with st.expander("LOAN MANAGEMENT SYSTEM"):
+            st.markdown("""
+            - Apply for loans
+            - Track loan status and repayments
+            - Manage user liabilities efficiently
+            """.title())
+
+        with st.expander("OPEN SOURCE PROJECT"):
+            st.markdown("""
+            - Fully open-source and customizable
+            - Built using FastAPI and Streamlit
+            - Easy to extend with new features
+            """.title())
 
     col1, col2, col3 = st.columns(3)
     with col2:

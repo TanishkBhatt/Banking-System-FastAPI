@@ -12,6 +12,7 @@ class User(BaseModel):
     email: EmailStr
     account_pin: str
     balance: float
+    loan: float
 
 def account_management():
     st.title("ACCOUNT MANAGEMENT")
@@ -31,7 +32,7 @@ def account_management():
         with col2:
             address = st.text_input("ENTER YOUR ADDRESS")
             email = st.text_input("ENTER YOUR EMAIL ADDRESS", value="@gmail.com")
-            account_pin = st.text_input("CREATE A SECURE PIN FOR YOUR ACCOUNT", type="password")
+            account_pin = st.text_input("CREATE A SECURE PIN FOR YOUR ACCOUNT", type="password", max_chars=10)
             balance = st.number_input("DEPOSIT SOME BALANCE INTO YOUR ACCOUNT", min_value=0.0, value=0.0, step=1.0)
 
         col1, col2, col3 = st.columns(3)
@@ -49,7 +50,8 @@ def account_management():
                     email=email,
                     account_pin=account_pin,
                     balance=balance,
-                    gender=gender
+                    gender=gender,
+                    loan=0
                 )
 
                 res = requests.post(
@@ -59,15 +61,18 @@ def account_management():
                                 )
 
                 data = res.json()
-                if data["message"] == "account sucessfully created":
-                    acc_data = data["account_details"]
+                if data:
+                    if data["message"] == "account sucessfully created":
+                        acc_data = data["account_details"]
 
-                    st.success("ACCOUNT SUCCESSFULLY CREATED")
-                    st.markdown("#### CREATED ACCOUNT DATA")
-                    st.dataframe(acc_data)
+                        st.success("ACCOUNT SUCCESSFULLY CREATED")
+                        st.markdown("#### CREATED ACCOUNT DATA")
+                        st.dataframe(acc_data)
 
+                    else:
+                        st.error(data["message"].upper())
                 else:
-                    st.error(data["message"].upper())
+                    st.error("FAILED TO RETRIEVE DATA")
 
             except ValidationError:
                 st.error("PLEASE FILL UP THE SUITABLE DATA TYPE")

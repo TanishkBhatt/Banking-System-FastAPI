@@ -27,5 +27,3 @@ match page:
         money_management()
     case "LOAN MANAGEMENT":
         loan_management()
-    case _:
-        pass 

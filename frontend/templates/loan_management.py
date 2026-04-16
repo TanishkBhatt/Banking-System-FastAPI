@@ -3,6 +3,7 @@ import requests
 
 def loan_management():
     st.title("LOAN MANAGEMENT")
+    st.markdown("compound interest loan at a rate of 18% for 1 year".upper())
     st.divider()
 
     st.subheader("BORROW LOAN")

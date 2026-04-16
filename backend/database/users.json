@@ -15,7 +15,7 @@
         "address": "London, UK",
         "email": "emma.watson@mail.com",
         "account_pin": "d37286d2dbd8452887cb6225466c0388c679f2aafdf0a32c8ff96d1fed9456b3",
-        "balance": 950000.0,
+        "balance": 949000.0,
         "loan": 0.0,
         "gender": "FEMALE"
     },
@@ -375,7 +375,7 @@
         "address": "Nottingham, UK",
         "email": "emily.r@gmail.com",
         "account_pin": "4906701ce49cbd68b0a43d0b1750fa725161f8e0c3ebbe9820de2d062cb91fb8",
-        "balance": 710000.0,
+        "balance": 1711000.0,
         "loan": 0.0,
         "gender": "FEMALE"
     },
