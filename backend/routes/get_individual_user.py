@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from models.db_manager import get_current_users
-from models.hashing import verify
+from utils.db_manager import get_current_users
+from utils.hashing import verify
 
 app = APIRouter(
      tags=["Current Users"]

@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from models.schema import User
-from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import hash_pin
+from utils.schema import User
+from utils.db_manager import get_current_users, import_data_to_db
+from utils.hashing import hash_pin
 
 app = APIRouter(
     tags=["Account Management"]

@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.db_manager import get_current_users
+from utils.db_manager import get_current_users
 
 app = APIRouter(
      tags=["Current Users"]

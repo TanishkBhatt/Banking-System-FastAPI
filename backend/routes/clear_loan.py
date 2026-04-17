@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import verify
-from models.interest_calc import compound_interest
+from utils.db_manager import get_current_users, import_data_to_db
+from utils.hashing import verify
+from utils.compound_interest import compound_interest
 
 app = APIRouter(
     tags=["Loan Management"]

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from models.db_manager import get_current_users, import_data_to_db
-from models.hashing import verify
+from utils.db_manager import get_current_users, import_data_to_db
+from utils.hashing import verify
 
 app = APIRouter(
     tags=["Loan Management"]
