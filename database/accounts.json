@@ -1,0 +1,57 @@
+{
+    "c293f817b203ebb50b6a8fb276f9c76b350e6ed65a0900c590e2dc4eeaa6c562": {
+        "username": "tanishk25",
+        "name": "Tanishk Bhatt",
+        "dob": "2000-01-01",
+        "gender": "MALE",
+        "address": "India",
+        "email": "tanishk@gmail.com",
+        "phone": "1234509876",
+        "balance": 241000.0,
+        "loan": 100000.0
+    },
+    "7ba985d8db49f619e2b66c255ba5846ce57de2d023cb28e3fdbfc00e23c2107f": {
+        "username": "tanisha19",
+        "name": "Tanisha Bhatt",
+        "dob": "2000-01-01",
+        "gender": "FEMALE",
+        "address": "India",
+        "email": "tanisha@gmail.com",
+        "phone": "1234567890",
+        "balance": 110000.0,
+        "loan": 0.0
+    },
+    "70619ca39d2ab9a70efd0117e9254ed8e2ea7bfcf29c383aca4e3c1b0ed9a22b": {
+        "username": "rohit264",
+        "name": "Rohit Sharma",
+        "dob": "1990-04-30",
+        "gender": "MALE",
+        "address": "Mumbai",
+        "email": "rohit264@gmail.com",
+        "phone": "1234512345",
+        "balance": 390000.0,
+        "loan": 0.0
+    },
+    "d1f7fa0f8fe10d099dfef5a9606c352b05c485dbac42b205a54f0b424ab05bd6": {
+        "username": "virat49",
+        "name": "King Kohli",
+        "dob": "1990-01-01",
+        "gender": "MALE",
+        "address": "London",
+        "email": "virat@gmail.com",
+        "phone": "1230984567",
+        "balance": 470000.0,
+        "loan": 0.0
+    },
+    "4e6841fa930281489d55e0a4b3e117753dd34ac504b534f051d9305b570ad542": {
+        "username": "ms07",
+        "name": "Dhoni",
+        "dob": "1975-01-15",
+        "gender": "MALE",
+        "address": "India",
+        "email": "ms@gmail.com",
+        "phone": "7777777777",
+        "balance": 1750000.0,
+        "loan": 0.0
+    }
+}

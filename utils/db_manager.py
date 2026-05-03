@@ -1,6 +1,6 @@
 import json
 
-def get_current_users(filepath: str) -> dict:
+def access_users(filepath: str) -> dict:
     with open(filepath, "r") as f:
         data = json.load(f)
     return data

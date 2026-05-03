@@ -1,0 +1,7 @@
+{
+    "global_loan_limit": 100080000.0,
+    "person_loan_limit": 10000000,
+    "interest_rate": 18,
+    "loan_type": "COMPOUND INTREST",
+    "max_duration": 48
+}
