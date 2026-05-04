@@ -14,7 +14,7 @@ def delete_account(account_pin: str) -> dict:
 
         hashed_pin = hash_pin(account_pin)
         
-        if hashed_pin in user_accounts.keys() and hashed_pin in users_history.keys():
+        if hashed_pin in user_accounts.keys():
             if user_accounts[hashed_pin]["loan"] == 0:
                 deleted_account_details = user_accounts[hashed_pin]
 

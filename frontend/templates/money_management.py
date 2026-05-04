@@ -77,7 +77,7 @@ def money_management():
                     else:
                         st.error(data["message"].upper())
                 else:
-                    st.error("FAILED TO RETRIVE DATA")
+                    st.error("FAILED TO RETRIEVE DATA")
             else:
                 st.warning("PLEASE ENTER THE ACCOUNT PIN TO TRANSACT")
 
@@ -98,7 +98,6 @@ def money_management():
                     data = res.json()
                     
                     if data:
-                        pass
                         if data["message"] == "money successfully transfered":
                             from_ = data["from"]
                             to_ = data["to"]
@@ -131,7 +130,7 @@ def money_management():
                         else:
                             st.error(data["message"].upper())
                     else:
-                        st.error("FAILED TO RETRIVE DATA")
+                        st.error("FAILED TO RETRIEVE DATA")
                 else:
                     st.error("SENDER'S PIN AND RECIEVER'S PIN CAN'T BE SAME")
             else:

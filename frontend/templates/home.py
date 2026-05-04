@@ -41,7 +41,7 @@ def home():
 
         with st.container(border=True):
             st.markdown("#### HISTORY TRACKING")
-            st.write("TRNSACTIONS | LOANS HISTORY")
+            st.write("TRANSACTIONS | LOANS HISTORY")
 
     st.divider()
 

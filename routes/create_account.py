@@ -14,7 +14,7 @@ def create_account(data: User) -> dict:
         user_accounts: dict = access_users("database/accounts.json")
         users_history: dict = access_users("database/user_history.json")
         invalid_pins: list = [verify(pin, data.account_pin) for pin in user_accounts.keys()]
-        invalid_usernames: list = [u_name for u_name in list(user_accounts.keys())]
+        invalid_usernames: list = [u_data["username"] for u_data in user_accounts.values()]
 
         if not any(invalid_pins):
             if data.username not in invalid_usernames:

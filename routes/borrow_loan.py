@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from utils.db_manager import access_users, import_data_to_db
-from utils.hashing import verify, hash_pin
+from utils.hashing import verify
 
 app = APIRouter(
     tags=["Loan Management"]
@@ -45,9 +45,9 @@ def borrow_loan(account_pin: str, money_to_borrow: float, time_duration: int) ->
                                         }
 
                                 return {"message": "error - user history not found"}
-                            return {"message": f"you can't borrow the loan for such a long period. maximum limit : {loan_config["person_loan_limit"]}"}
+                            return {"message": f"you can't borrow the loan for such a long period. maximum limit : {loan_config["max_duration"]}"}
                         return {"message": f"sorry but our loan system didn't have much money. money limit : {loan_config["global_loan_limit"]}"}
-                    return {"message": f"you can't borrow such a large amount. maximim limit : {loan_config["time_duration"]}"}
+                    return {"message": f"you can't borrow such a large amount. maximim limit : {loan_config["person_loan_limit"]}"}
                 return {"message": "you already had an loan uncleared, first clear that"}
             
         return {"message": "this account pin does not exists"}

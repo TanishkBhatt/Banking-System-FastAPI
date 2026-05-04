@@ -4,7 +4,7 @@ from .utils import loan_config
 
 def loan_management():
     st.title("LOAN MANAGEMENT")
-    st.markdown(f"compound interest | {loan_config["interest_rate"]}% interest rate".upper())
+    st.markdown(f"compound interest | {loan_config['interest_rate']}% interest rate".upper())
     st.divider()
 
     st.subheader("BORROW LOAN")
@@ -76,7 +76,7 @@ def loan_management():
                     else:
                         st.error(data["message"].upper())
                 else:
-                    st.error("FAILED TO RETRIVE DATA")
+                    st.error("FAILED TO RETRIEVE DATA")
             else:
                 st.warning("PLEASE ENTER THE ACCOUNT PIN TO TRANSACT")
 

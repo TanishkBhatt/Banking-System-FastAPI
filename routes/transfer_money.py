@@ -25,7 +25,7 @@ def transfer_money(senders_pin: str, recievers_pin: str, money_to_transfer: floa
             except KeyError:
                 return {"message": "users history not found, money not transfered"}
             else:
-                if sender_account["balance"] > money_to_transfer:
+                if sender_account["balance"] >= money_to_transfer:
                     user_accounts[hash_pin(senders_pin)]["balance"] -= money_to_transfer
                     user_accounts[hash_pin(recievers_pin)]["balance"] += money_to_transfer
 

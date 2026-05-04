@@ -3,7 +3,7 @@ import requests
 
 def current_users():
     st.title("CURRENT USERS")
-    st.markdown("FETCH ALL CURRECT USERS DATA")
+    st.markdown("FETCH ALL CURRENT USERS DATA")
     st.divider()
 
     res = requests.get("http://127.0.0.1:8000/get-all-users/")
@@ -19,7 +19,7 @@ def current_users():
         else:
             st.error(data["message"].upper())
     else:
-        st.error("FAILED TO RETRIVE DATA")
+        st.error("FAILED TO RETRIEVE DATA")
 
     st.subheader("GET INDIVIDUAL USER")
     st.markdown("")
@@ -30,7 +30,7 @@ def current_users():
 
     if get_data:
         if account_pin.strip():
-            res = requests.get(f"http://127.0.0.1:8000//get-indvidual-user/{account_pin}")
+            res = requests.get(f"http://127.0.0.1:8000/get-indvidual-user/{account_pin}")
             data = res.json()
             if data:
                 if data["message"] == "data sucessfully recieved":
@@ -48,12 +48,12 @@ def current_users():
                     with col2:
                         st.markdown("#### TRANSACTIONS HISTORY")
                         st.dataframe(user_history["transaction_history"])
-                        st.markdown("#### LOAN HISTPRY")
+                        st.markdown("#### LOAN HISTORY")
                         st.dataframe(user_history["loan_history"])
                 else:
                     st.error(data["message"].upper())
             else:
-                st.error("FAILED TO RETRIVE DATA")
+                st.error("FAILED TO RETRIEVE DATA")
         else:
             st.warning("PLEASE ENTER THE ACCOUNT PIN")
             

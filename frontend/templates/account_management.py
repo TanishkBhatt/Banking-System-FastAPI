@@ -122,7 +122,7 @@ def account_management():
                 else:
                     st.error(data["message"].upper())
             else:
-                st.error("FAILED TO RETRIVE DATA")
+                st.error("FAILED TO RETRIEVE DATA")
         else:
             st.warning("PLEASE FILL UP ALL THE DETAILS")
 
@@ -161,7 +161,7 @@ def account_management():
                 else:
                     st.error(data["message"].upper())
             else:
-                st.error("FAILED TO RETRIVE DATA")
+                st.error("FAILED TO RETRIEVE DATA")
         else:
             st.warning("PLEASE ENTER THE ACCOUNT PIN")
 
