@@ -1,0 +1,23 @@
+[project]
+name = "backend-project"
+version = "0.1.0"
+description = "a complete backend project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "jose>=1.0.0",
+    "pydantic-settings>=2.15.0",
+    "pydantic[email]>=2.13.5",
+    "pytest>=9.1.1",
+    "requests>=2.34.2",
+    "slowapi>=0.1.10",
+    "sqlalchemy>=2.1.1",
+    "uv-script>=0.1.9",
+    "uvicorn>=0.54.0",
+]
+
+[tool.uvs.scripts]
+dev = "uvicorn main:app --port 3000 --reload"
+start = "uvicorn main:app --port 3000"
+test = "pytest tests -v"
