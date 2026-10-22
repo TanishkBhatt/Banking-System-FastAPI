@@ -3,12 +3,10 @@ from routes import (
     home
 )
 
-# INITIALIZING APP
+# Initializing App
 app = FastAPI(
-    title="Banking System",
-    description="A Complete FastAPI driven Banking System Backend",
-    version="1.0.0"
+    title="Banking System - FastAPI"
 )
 
-# INCLUDING ROUTERS
+# Including Routers
 app.include_router(home.router)

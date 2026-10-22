@@ -1,5 +1,5 @@
 from fastapi import APIRouter, status
-from schemas.home import HomeResponse
+from schemas.home import ResponseModel
 
 router = APIRouter(
     tags=["Home"]
@@ -7,8 +7,8 @@ router = APIRouter(
 
 @router.get(
     "/",
-    response_model=HomeResponse,
+    response_model=ResponseModel,
     status_code=status.HTTP_200_OK
 )
-def home() -> dict[str, str]:
+def route() -> dict[str, str]:
     return {"message": "Welcome to the home page!"}

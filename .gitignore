@@ -16,5 +16,8 @@ wheels/
 uv.lock
 .python-version
 
+# Database 
+app.db
+
 # Pytest
 pytest_cache/
